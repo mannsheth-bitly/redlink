@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <!-- Installable web app (spec decision 2): manifest + home-screen icons. -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Red Link" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#B91C1C" />
+    <meta
+      name="description"
+      content="Red Link connects blood donors with patients, hospitals, emergency services and blood banks, matching by blood group compatibility, distance and eligibility."
+    />
+    <title>Red Link — Blood donation, connected</title>
+    <script>
+      // Apply the saved / system theme before the page paints (no flash of the wrong theme).
+      try {
+        var t = localStorage.getItem("redlink-theme");
+        if (t === "dark" || (t !== "light" && matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

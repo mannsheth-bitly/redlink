@@ -1,0 +1,32 @@
+# Render Blueprint: one web service that serves the API and the built React app (single port).
+# The database is MongoDB Atlas (free M0 cluster); paste its connection string as MONGODB_URI.
+# See README "Deploying online".
+services:
+  - type: web
+    name: red-link
+    runtime: node
+    plan: free
+    region: singapore
+    # Dev dependencies (TypeScript, Vite, tsx) are needed to build and run.
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "24"
+      - key: MONGODB_URI
+        sync: false # set in the Render dashboard (Atlas connection string)
+      - key: JWT_SECRET
+        generateValue: true
+      - key: VITE_DEMO_MODE
+        value: "true"
+      - key: APP_URL
+        sync: false # e.g. https://red-link.onrender.com
+      - key: GEOCODER_CONTACT
+        sync: false # an email address for OpenStreetMap Nominatim's usage policy
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false

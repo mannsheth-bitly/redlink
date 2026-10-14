@@ -1,0 +1,13 @@
+{
+  "name": "@red-link/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Domain rules and validators shared by the server and the client",
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  }
+}

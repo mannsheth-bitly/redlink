@@ -1,0 +1,20 @@
+{
+  "name": "Red Link — Blood donation, connected",
+  "short_name": "Red Link",
+  "description": "Connects blood donors with patients, hospitals, emergency services and blood banks, matching by blood group compatibility, distance and eligibility.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#B91C1C",
+  "lang": "en-IN",
+  "categories": ["health", "medical"],
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
