@@ -4,6 +4,8 @@ A blood donation platform that connects donors with patients, hospitals, emergen
 
 **Stack:** React (Vite) + Express + Node.js + MongoDB, all in TypeScript. Mobile-first and installable on phones (PWA).
 
+**Live demo:** https://red-link-1hq1.onrender.com (free hosting: the first visit after ~15 minutes idle can take up to a minute to wake up). Demo logins are listed on the login page; password `demo1234`.
+
 - Full specification: [`RED_LINK_BUILD_SPEC.md`](RED_LINK_BUILD_SPEC.md)
 - Decisions made during the build: [`docs/DECISIONS.md`](docs/DECISIONS.md)
 - Academic documents (architecture, ER diagram, DFDs, use cases, sequence diagrams, matching algorithm, feasibility, non-functional requirements, test plan, future scope): [`docs/`](docs/README.md)
